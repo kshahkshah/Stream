@@ -1,0 +1,23 @@
+<p>
+  <b>Attachment file name:</b>
+  <%=h @element.attachment_file_name %>
+</p>
+
+<p>
+  <b>Attachment content type:</b>
+  <%=h @element.attachment_content_type %>
+</p>
+
+<p>
+  <b>Attachment file size:</b>
+  <%=h @element.attachment_file_size %>
+</p>
+
+<p>
+  <b>Attachment updated at:</b>
+  <%=h @element.attachment_updated_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_element_path(@element) %> |
+<%= link_to 'Back', elements_path %>
