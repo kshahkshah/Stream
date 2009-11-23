@@ -1,6 +1,17 @@
 class ElementsController < ApplicationController
   # GET /elements
   # GET /elements.xml
+  def stream
+    @elements = Element.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @elements }
+    end
+  end
+
+  # GET /elements
+  # GET /elements.xml
   def index
     @elements = Element.all
 

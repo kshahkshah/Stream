@@ -1,23 +1,10 @@
-<h1>Editing element</h1>
+<h1>Editing Element</h1>
 
-<% form_for(@element) do |f| %>
+<% form_for @element, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
-
   <p>
-    <%= f.label :attachment_file_name %><br />
-    <%= f.text_field :attachment_file_name %>
-  </p>
-  <p>
-    <%= f.label :attachment_content_type %><br />
-    <%= f.text_field :attachment_content_type %>
-  </p>
-  <p>
-    <%= f.label :attachment_file_size %><br />
-    <%= f.text_field :attachment_file_size %>
-  </p>
-  <p>
-    <%= f.label :attachment_updated_at %><br />
-    <%= f.datetime_select :attachment_updated_at %>
+    <%= f.label :attachment %><br />
+    <%= f.file_field :attachment %>
   </p>
   <p>
     <%= f.submit 'Update' %>
