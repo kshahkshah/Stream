@@ -1,5 +1,5 @@
 - @elements.each do |element|
   .element
-    %h2 Title
+    %h2= element.name
     .tags= "tagged with: #{element.tags}" if element.tags?
     .image= image_tag element.attachment.url(:large)
