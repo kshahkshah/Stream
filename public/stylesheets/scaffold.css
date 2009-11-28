@@ -60,8 +60,23 @@ h2 {
   color: #66C;
   font-size:4em;
   font-family:Garamond;
+  padding:0;
 }
 
 .navigation {
-  
+  list-style:none;
+  font-size:2em; 
+  font-weight:bold;
+  margin:0;
+  padding:0;
+}
+
+.navigation li { 
+  float:left; 
+  margin:0 2em 0 0;
+}
+
+.navigation a {
+  color: #C33;
+  text-decoration:none;
 }

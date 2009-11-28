@@ -1,6 +1,15 @@
 %h1 My Stream
 
-- @elements.each do |element|
-  %h2 Title
-  = image_tag element.attachment.url(:large)
-  %br
+%ul.navigation
+  %li= link_to "Subscribe", elements_path
+  %li= link_to "Tags", elements_path
+  %li= link_to "Location", elements_path
+  %li= link_to "Search", elements_path
+
+%br
+
+.content
+  - @elements.each do |element|
+    .element
+      %h2 Title
+      .image= image_tag element.attachment.url(:large)
