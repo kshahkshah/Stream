@@ -1,0 +1,12 @@
+%table
+  %tr
+    %th Name
+    %th Sent From
+    %th actions
+  - @elements.each do |element| 
+    %tr
+      %td= link_to element.attachment_file_name, element_path(element)
+      %td
+        =h element.location
+        = "at #{h element.attachment_updated_at}" 
+      %td= link_to 'Destroy', element, :confirm => 'Are you sure?', :method => :delete

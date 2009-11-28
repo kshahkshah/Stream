@@ -1,15 +1,5 @@
-%h1 My Stream
-
-%ul.navigation
-  %li= link_to "Subscribe", elements_path
-  %li= link_to "Tags", elements_path
-  %li= link_to "Location", elements_path
-  %li= link_to "Search", elements_path
-
-%br
-
-.content
-  - @elements.each do |element|
-    .element
-      %h2 Title
-      .image= image_tag element.attachment.url(:large)
+- @elements.each do |element|
+  .element
+    %h2 Title
+    .tags= "tagged with: #{element.tags}" if element.tags?
+    .image= image_tag element.attachment.url(:large)

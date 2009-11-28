@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title= @title
+    = stylesheet_link_tag 'elements'
+  %body
+    %p{:style => "color: green"}= flash[:notice]
+
+    %h1= @title
+    %ul.navigation
+      %li= link_to "Home", stream_elements_path
+      %li= link_to "Subscribe", stream_elements_path(:xml)
+      %li= link_to "Edit", elements_path
+      %li= link_to "Search", elements_path
+
+    .content
+      = yield

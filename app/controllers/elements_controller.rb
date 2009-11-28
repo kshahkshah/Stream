@@ -3,6 +3,7 @@ class ElementsController < ApplicationController
   # GET /elements.xml
   def stream
     @elements = Element.all
+    @title = "My Stream"
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +15,7 @@ class ElementsController < ApplicationController
   # GET /elements.xml
   def index
     @elements = Element.all
+    @title = "Elements"
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,6 +27,7 @@ class ElementsController < ApplicationController
   # GET /elements/1.xml
   def show
     @element = Element.find(params[:id])
+    @title = @element.name
 
     respond_to do |format|
       format.html # show.html.erb
