@@ -1,7 +1,7 @@
 class Element < ActiveRecord::Base
   
   has_attached_file :attachment, :styles => { :large => "600x600>" }
-  acts_as_taggable_on :location, :subject, :description, :keywords, :ip, :sent_from, :batch
+  acts_as_taggable_on :location, :subject, :description, :keyword, :ip, :sent_from, :batch
 
   def tags?
     tags.any?
